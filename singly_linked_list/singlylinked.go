@@ -20,15 +20,17 @@ func main() {
 		top = addAtTop(top, rand.Intn(40))
 	}
 	printList(top)
-	addToEnd(top, 333)
+	addToEnd(top, 222)
 	printList(top)
 	addToPosition(top, 444, 2)
 	printList(top)
 	top = removeAtTop(top)
 	printList(top)
-	removeAtEnd(top)
+	removeAtEnd(&top)
 	printList(top)
 	removeAtPosition(&top, 8)
+	printList(top)
+	bubbleSort(&top)
 	printList(top)
 }
 
@@ -54,8 +56,10 @@ func addToPosition(top Node, data, pos int) {
 		return
 	}
 	before := &top
-	for i := 0; i < pos-1; i++ {
+	curr := 0
+	for curr < pos-1 {
 		before = before.next
+		curr++
 	}
 	newCell := Node{data, before.next}
 	before.next = &newCell
@@ -75,8 +79,8 @@ func removeAtTop(top Node) Node {
 	return *top.next
 }
 
-func removeAtEnd(top Node) {
-	prev := &top
+func removeAtEnd(top *Node) {
+	prev := top
 	for prev.next.next != nil {
 		prev = prev.next
 	}
@@ -90,10 +94,12 @@ func removeAtPosition(top *Node, pos int) {
 		return
 	}
 	before := top
-	for i := 0; i < pos-1; i++ {
+	curr := 0
+	for curr < pos-1 {
 		before = before.next
+		curr++
 	}
-	if before.next.next != nil {
+	if before.next != nil {
 		before.next = before.next.next
 	} else {
 		before.next = nil
@@ -107,4 +113,22 @@ func printList(top Node) {
 		current = current.next
 	}
 	fmt.Println()
+}
+
+func bubbleSort(top *Node) {
+	if top == nil {
+		return
+	}
+	var curr = top
+	top = nil
+	for curr != nil && curr.next != nil {
+		var temp = curr.next
+		for temp.next != nil {
+			if curr.data > temp.data {
+				curr.data, temp.data = temp.data, curr.data
+			}
+			temp = temp.next
+		}
+		curr = curr.next
+	}
 }
