@@ -5,8 +5,10 @@ This repository has the basic algorithms and data structures implemented in Gola
 - #### Algorithms
     - Greatest Common Divisor
     - Least Common Multiple
-    - LCG
+    - LCG Random
     - Randomize Array
+    - Bubble Sort
+        - Singly Linked List
 - #### Data Structures & Operations
     - Singly Linked List
         - Add (at the beginning, at the end, at specific position)
