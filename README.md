@@ -8,10 +8,13 @@ This repository has the basic algorithms and data structures implemented in Gola
     - LCG Random
     - Randomize Array
     - Bubble Sort
-        - Singly Linked List
+        - Implemented in (Singly Linked List)
 - #### Data Structures & Operations
     - Singly Linked List
         - Add (at the beginning, at the end, at specific position)
         - Remove (at the beginning, at the end, at specific position)
         - Iterate
         - Length
+    - Doubly Linked List
+        - Add (at the end)
+        - Iterate (forward, backward)
