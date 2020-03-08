@@ -7,8 +7,10 @@ This repository has the basic algorithms and data structures implemented in Gola
     - Least Common Multiple
     - LCG Random
     - Randomize Array
+    - Standard Deviation
+    - Variance
     - Bubble Sort
-        - Implemented in (Singly Linked List)
+        - Implemented in (Singly Linked List, One-Dimensional Array)
 - #### Data Structures & Operations
     - Singly Linked List
         - Add (at the beginning, at the end, at specific position)
@@ -18,3 +20,9 @@ This repository has the basic algorithms and data structures implemented in Gola
     - Doubly Linked List
         - Add (at the end)
         - Iterate (forward, backward)
+    - One-Dimensional Array
+        - Iterate
+        - Swap items
+        - Standard Deviation
+        - Largest Item
+        - Smallest Item
