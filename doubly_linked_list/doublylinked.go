@@ -27,6 +27,9 @@ func main() {
 	insert(list, 666)
 	printList(list)
 	printListReversed(list)
+	list2 := &List{}
+	printList(list2)
+	printListReversed(list2)
 }
 
 func insert(list *List, data int) {
@@ -49,6 +52,7 @@ func printList(list *List) {
 	top := list.start
 	if top == nil {
 		fmt.Println("The list is empty.")
+		return
 	}
 	for top != nil {
 		fmt.Print(top.data, "\t")
@@ -61,6 +65,7 @@ func printListReversed(list *List) {
 	tail := list.tail
 	if tail == nil {
 		fmt.Println("The list is empty.")
+		return
 	}
 	for tail != nil {
 		fmt.Print(tail.data, "\t")
